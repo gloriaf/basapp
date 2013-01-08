@@ -3,13 +3,23 @@
 Esta es una app básica que puede ser usada como base para generar aplicaciones web con Ruby on Rails.
 Sus características principales son:
 - Manejo de páginas estáticas:
-       * Home
-       * Help
-       * Contacto
+       * Inicio
+       * Ayuda
+       * Contactar
        * Acerca de nosotros
 - Registro de usuarios própio (Devise)
 - Registro de usuarios a través de terceros: Twitter y Facebook (Omniaut)
 - Envío de email (mail)
 - Multi-idiomas
 
-
+This is a basic Ruby on Rails app, that can be used as a basis for building Web applications.
+Its main features are:
+- Managing static pages:
+       * Home
+       * Help
+       * Contact
+       * About us
+- User registration (Devise)
+- User registration through third: Twitter and Facebook
+- Sending email (mail)
+- Multi-languages
