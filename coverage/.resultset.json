@@ -1,0 +1,46 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/helpers/application_helper.rb": [
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/helpers/static_pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/controllers/static_pages_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1357660560
+  }
+}
