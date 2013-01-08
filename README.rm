@@ -1,0 +1,15 @@
+== Welcome to basapp
+
+Esta es una app básica que puede ser usada como base para generar aplicaciones web con Ruby on Rails.
+Sus características principales son:
+- Manejo de páginas estáticas:
+       * Home
+       * Help
+       * Contacto
+       * Acerca de nosotros
+- Registro de usuarios própio (Devise)
+- Registro de usuarios a través de terceros: Twitter y Facebook (Omniaut)
+- Envío de email (mail)
+- Multi-idiomas
+
+
