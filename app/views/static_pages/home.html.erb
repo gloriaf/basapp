@@ -28,5 +28,7 @@
     - Multi-languages
   </h3>
   <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %> or
-  <%= link_to "Login", new_user_session_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "Login", new_user_session_path, class: "btn btn-large btn-primary" %> | 
+  <%= link_to "Login with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-large btn-primary"  %>
+
 </div>

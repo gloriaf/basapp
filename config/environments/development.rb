@@ -22,4 +22,7 @@ Basapp::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  TWITTER_CONSUMER_KEY="kLbSUQgAzuqp719BiXKxw"
+  TWITTER_CONSUMER_SECRET="e5XkThsq04HuTdeokXnjMQNV3vtmti3UVXBCPr4c1bY"
 end

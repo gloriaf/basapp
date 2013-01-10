@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/models/user.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/controllers/application_controller.rb": [
         1,
         1,
@@ -41,6 +54,6 @@
         null
       ]
     },
-    "timestamp": 1357660560
+    "timestamp": 1357748094
   }
 }

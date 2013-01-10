@@ -8,16 +8,26 @@
     <div><%= f.label :email %><br />
     <%= f.email_field :email, :autofocus => true %></div>
   
-    <div><%= f.label :password %><br />
-    <%= f.password_field :password %></div>
+    <% if f.object.password_required? %>
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password %></div>
 
-    <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %></div>
+      <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %></div>
+    <% end %>
     
     <div class="field"><%= f.label :username %><br />
     <%= f.text_field :username %></div>
 
-    <div><%= f.submit "Sign up", class: "btn btn-large btn-primary" %></div>
+    <div>
+      <%= f.submit "Sign up", class: "btn btn-large btn-primary" %>
+      <%- if devise_mapping.omniauthable? %>
+        <%- resource_class.omniauth_providers.each do |provider| %>
+          or
+          <%= link_to "Login with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn btn-large btn-primary"  %><br />
+        <% end -%>
+      <% end -%>
+    </div>
     <% end %>
 
   <%= render "devise/shared/links" %>
