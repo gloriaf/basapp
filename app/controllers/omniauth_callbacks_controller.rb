@@ -33,5 +33,5 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
   
-  alias_method :twitter, :linkedin, :github
+  alias_method :twitter, :linkedin
 end
