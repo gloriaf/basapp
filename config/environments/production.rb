@@ -71,4 +71,6 @@ Basapp::Application.configure do
   LINKEDIN_CONSUMER_KEY="x0fyza903qp4"
   LINKEDIN_CONSUMER_SECRET="7t2tn3x7o13W2Gvt"
 
+  GITHUB_KEY="68084d44ecba0c9ac416"
+  GITHUB_SECRET="c2f4c15c51cb413dfaec3d21cd73d1da4e968cdc"
 end
