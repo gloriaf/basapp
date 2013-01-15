@@ -5,6 +5,8 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+gem 'omniauth-github'
 
 group :assets do
   gem 'sass-rails'

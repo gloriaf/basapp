@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.username = auth.info.nickname
+      user.email = auth.info.email
     end
   end
   
@@ -28,6 +29,10 @@ class User < ActiveRecord::Base
   def password_required?
     super && provider.blank?
   end
+  
+#  def confirmation_required?
+#    super && email.present?
+#  end
   
   def update_with_password(params, *options)
     if encrypted_password.blank?
