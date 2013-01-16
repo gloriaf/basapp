@@ -21,7 +21,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
-  
+
+  alias_method :twitter, :linkedin
+
   def github
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
@@ -37,5 +39,4 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to root, :alert => "Authentication error: #{params[:message].humanize}"
   end
   
-  alias_method :twitter, :github, :linkedin
 end
