@@ -1,7 +1,7 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <nav>
+          <nav  class="blanco"> 
             <%= link_to image_tag("logo.png", alt: "pabilos"), 'http://www.pabilos.com', id: "logo" %>
             <% if user_signed_in? %>
               Logged in as <strong><%= current_user.email %></strong>
