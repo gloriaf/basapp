@@ -33,9 +33,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
   
-  alias_method :twitter, :github, :linkedin
-  
   def failure
-    redirect_to root_url, :alert => "Authentication error: #{params[:message].humanize}"
+    redirect_to '/', :alert => "Authentication error: #{params[:message].humanize}"
   end
+  
+  alias_method :twitter, :github, :linkedin
 end
