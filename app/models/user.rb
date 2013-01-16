@@ -30,9 +30,9 @@ class User < ActiveRecord::Base
     super && provider.blank?
   end
   
-#  def confirmation_required?
-#    super && email.present?
-#  end
+  def confirmation_required?
+    super && email.present?
+  end
   
   def update_with_password(params, *options)
     if encrypted_password.blank?

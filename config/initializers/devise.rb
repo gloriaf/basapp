@@ -29,5 +29,6 @@ Devise.setup do |config|
   
   config.omniauth :twitter,  TWITTER_CONSUMER_KEY,  TWITTER_CONSUMER_SECRET
   config.omniauth :linkedin, LINKEDIN_CONSUMER_KEY, LINKEDIN_CONSUMER_SECRET
-  config.omniauth :github,   GITHUB_KEY,            GITHUB_SECRET
+  config.omniauth :github,   GITHUB_KEY,            GITHUB_SECRET, :scope => "repo"
+  OmniAuth.config.logger = Rails.logger
 end

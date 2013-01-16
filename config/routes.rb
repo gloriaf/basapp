@@ -1,7 +1,10 @@
 Basapp::Application.routes.draw do
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   root to: 'static_pages#home'
+
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  
+  match '/auth/failure', to: 'omniauth_callbacks#failure'
 
   match '/help',    to: 'static_pages#help'
   match '/contact', to: 'static_pages#contact'
