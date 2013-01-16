@@ -4,9 +4,10 @@ gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-linkedin'
-gem 'omniauth-github'
+gem 'omniauth-github', "~> 1.0.3"
 
 group :assets do
   gem 'sass-rails'
