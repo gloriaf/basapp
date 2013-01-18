@@ -26,9 +26,12 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
 
   config.sign_out_via = :delete
+  config.sign_out_via = Rails.env.test? ? :get : :delete
   
   config.omniauth :twitter,  TWITTER_CONSUMER_KEY,  TWITTER_CONSUMER_SECRET
   config.omniauth :linkedin, LINKEDIN_CONSUMER_KEY, LINKEDIN_CONSUMER_SECRET
   config.omniauth :github,   GITHUB_KEY,            GITHUB_SECRET, scope: "user,repo,gist"
   OmniAuth.config.logger = Rails.logger
+#  OmniAuth.config.test_mode = true
+  
 end

@@ -3,14 +3,48 @@
     "coverage": {
       "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/models/user.rb": [
         1,
-        null,
+        1,
         null,
         null,
         1,
         null,
         null,
+        1,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        36,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
         null,
         null
       ],
@@ -34,8 +68,37 @@
         null,
         null
       ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/helpers/omniauth_callbacks_helper.rb": [
+        1,
+        null
+      ],
       "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/helpers/static_pages_helper.rb": [
         1,
+        null
+      ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/controllers/omniauth_callbacks_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/controllers/static_pages_controller.rb": [
@@ -54,6 +117,6 @@
         null
       ]
     },
-    "timestamp": 1357748094
+    "timestamp": 1358513850
   }
 }

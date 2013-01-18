@@ -4,7 +4,7 @@ Basapp::Application.routes.draw do
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   
-  match '/users/auth/github/', to: 'omniauth_callbacks#github'
+#  match '/users/auth/github/', to: 'omniauth_callbacks#github'
   match '/users/auth/failure', to: 'omniauth_callbacks#failure'
 
   match '/help',    to: 'static_pages#help'

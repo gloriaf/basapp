@@ -23,6 +23,12 @@ module NavigationHelpers
       contact_path
     when /the help page/
       help_path
+    when /the sign up page/
+      '/users/sign_up'
+    when /the sign in page/
+      '/users/sign_in'
+    when /Logout/
+      '/users/sign_out'
 
     else
       begin
