@@ -11,6 +11,8 @@ describe User do
     }
   end
   
+  its(:username) { should respond_to }
+  
   it "should create a new instance given a valid attribute" do
     User.create!(@attr)
   end
@@ -95,4 +97,4 @@ describe User do
     end
   end
 
-end
+ end

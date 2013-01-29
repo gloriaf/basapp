@@ -36,5 +36,7 @@ module Basapp
       g.helper_specs false  
     end  
     
+    config.active_record.observers = :user_observer
+    
   end
 end
