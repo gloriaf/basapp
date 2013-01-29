@@ -13,4 +13,10 @@ require 'spec_helper'
       response.should be_redirect 
     end
 
+#   it "should redirect back with an error when provider is missing" do
+#      get :twitter
+#      request.env["omniauth.auth"] = nil
+#      response.should redirect_to root_path 
+#    end
+
   end

@@ -3,13 +3,7 @@ Feature: About Us page
     As an user
     I want to see a aboutUs page
     
-#    Background: topics and notes in database
-#	Given the following topics exists:
-#	| name     | topic_type | description |
-#	| Cucumber | Tool       | BDD         |
-#	| Rspec    | Tool       | TDD         |
-#        And the following notes exists for "Cucumber"
-	
+#
     Scenario: About us page
 	When I go to the aboutUs page
 #	Then show me the page

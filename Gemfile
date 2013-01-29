@@ -29,6 +29,7 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'factory_girl_rails'
   gem 'factory_girl'
+  gem 'email_spec'
 end
 
 group :production do

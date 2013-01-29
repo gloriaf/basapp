@@ -32,7 +32,7 @@
         null,
         null,
         1,
-        36,
+        44,
         null,
         null,
         1,
@@ -115,8 +115,36 @@
         1,
         null,
         null
+      ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/mailers/emailer.rb": [
+        1,
+        1,
+        null,
+        1,
+        11,
+        11,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/models/user_observer.rb": [
+        1,
+        null,
+        1,
+        9,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1358783689
+    "timestamp": 1359476534
   }
 }

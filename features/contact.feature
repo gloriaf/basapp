@@ -3,13 +3,6 @@ Feature: Contact page
     As an user
     I want to see a contact page
     
-#    Background: topics and notes in database
-#	Given the following topics exists:
-#	| name     | topic_type | description |
-#	| Cucumber | Tool       | BDD         |
-#	| Rspec    | Tool       | TDD         |
-#        And the following notes exists for "Cucumber"
-	
     Scenario: Home page
 	When I go to the contact page
 #	Then show me the page

@@ -3,13 +3,6 @@ Feature: Help page
     As an user
     I want to see a help page
     
-#    Background: topics and notes in database
-#	Given the following topics exists:
-#	| name     | topic_type | description |
-#	| Cucumber | Tool       | BDD         |
-#	| Rspec    | Tool       | TDD         |
-#        And the following notes exists for "Cucumber"
-	
     Scenario: Help page
 	When I go to the help page
 #	Then show me the page

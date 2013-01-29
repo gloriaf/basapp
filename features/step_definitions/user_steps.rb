@@ -194,3 +194,11 @@ Then /^I should see my name$/ do
   create_user
   page.should have_content @user[:name]
 end
+
+When /^I fill in "(.*?)" with "(.*?)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+When /^(?:|I )press "([^"]*)"$/ do |button|
+  click_button(button)
+end
+
