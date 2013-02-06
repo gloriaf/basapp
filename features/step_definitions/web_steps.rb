@@ -26,6 +26,13 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
     assert page.has_content?(text)
   end
 end
+Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should_not have_content(text)
+  else
+    assert page.has_no_content?(text)
+  end
+end
 
 Then /^(?:|I )should see "([^"]*)" in the selector "([^"]*)"$/ do |text, selector|
   page.should have_selector selector, text: text
@@ -38,3 +45,8 @@ end
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
+
+Then /^I should see an error message$/ do
+  page.should have_selector('div.alert.alert-error')
+end
+

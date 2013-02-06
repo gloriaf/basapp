@@ -35,6 +35,10 @@
       <%= link_to "Login with LinkedIn", user_omniauth_authorize_path(:linkedin), class: "btn btn-large btn-primary"  %> *
       <%= link_to "Login with GitHub", user_omniauth_authorize_path(:github), class: "btn btn-large btn-primary"  %>  
     </p>
+  <% else %>
+    <p class= "center">
+      <%= link_to "Task List", tasks_path, class: "btn btn-large btn-primary" %>  
+    </p>
   <% end %>
 
 </div>

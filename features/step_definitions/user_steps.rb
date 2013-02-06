@@ -4,6 +4,10 @@ def create_visitor
   @visitor ||= { :username => "User", :email => "user@example.com",
     :password => "12345678", :password_confirmation => "12345678" }
 end
+def create_admin
+  @admin ||= { :username => "administrator", :email => "adminr@example.com",
+    :password => "12345678", :password_confirmation => "12345678" }
+end
 
 def find_user
   @user ||= User.where(:email => @visitor[:email]).first
@@ -22,8 +26,20 @@ def create_user
   @user = FactoryGirl.create(:user, email: @visitor[:email])
 end
 
+def create_admin_user
+  create_admin
+  delete_admin_user
+  @user = FactoryGirl.create(:user, email: @admin[:email], username: @admin[:username])
+  @current_user=@user
+end
+
 def delete_user
   @user ||= User.where(:email => @visitor[:email]).first
+  @user.destroy unless @user.nil?
+end
+
+def delete_admin_user
+  @user ||= User.where(:email => @admin[:email]).first
   @user.destroy unless @user.nil?
 end
 
@@ -44,6 +60,12 @@ def sign_in
   fill_in "user_password", :with => @visitor[:password]
   click_button "Sign in"
 end
+def sign_in_admin
+  visit '/users/sign_in'
+  fill_in "user_email", :with => @admin[:email]
+  fill_in "user_password", :with => @admin[:password]
+  click_button "Sign in"
+end
 
 ### GIVEN ###
 Given /^I am not logged in$/ do
@@ -54,6 +76,11 @@ end
 Given /^I am logged in$/ do
   create_user
   sign_in
+end
+
+Given /^I am logged in as an admin user$/ do
+  create_admin_user
+  sign_in_admin
 end
 
 Given /^I exist as a user$/ do

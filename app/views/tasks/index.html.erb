@@ -1,0 +1,46 @@
+<% provide(:title, 'Tasks') %>
+<h1>Basic app | <%= yield(:title) %></h1>
+
+<table  class="pretty hero-unit">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Go</th>
+    <% if user_signed_in? && current_user.username == "administrator"%>
+        <th>Code</th>
+        <th>Sequence</th>
+        <th>Rroute</th>
+        <th>General</th>
+        <th>Active</th>
+        <th>S</th>
+        <th>E</th>
+        <th>D</th>
+    <% end %>
+  </tr>
+
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.title %></td>
+    <td><%= task.description %></td>
+    <td><%= link_to image_tag("go.gif", alt: "execute"), task_execute_path(task) %></td>
+    <% if user_signed_in? && current_user.username == "administrator"%>
+      <td><%= task.code %></td>
+      <td><%= task.sequence %></td>
+      <td><%= task.rroute %></td>
+      <td><%= task.general %></td>
+      <td><%= task.active %></td>
+      <td><%= link_to image_tag("show.gif", alt: "show"), task %></td>
+      <td><%= link_to image_tag("edit.gif", alt: "edit"), edit_task_path(task) %></td>
+      <td><%= link_to image_tag("delete.gif", alt: "delete"), task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @tasks %>
+
+<br />
+<p class="center">
+  <% if user_signed_in? && current_user.username == "administrator"%>
+    <%= link_to 'New Task', new_task_path %>
+  <% end %>
+</p>

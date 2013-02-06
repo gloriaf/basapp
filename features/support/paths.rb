@@ -29,6 +29,10 @@ module NavigationHelpers
       '/users/sign_in'
     when /Logout/
       '/users/sign_out'
+    when /the task page/
+      tasks_path
+    when /^the show page for task "([^"]*)"$/
+      task_path(Task.find_by_title($1).id)
 
     else
       begin

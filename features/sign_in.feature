@@ -13,8 +13,14 @@ Feature: Sign in
       Given I exist as a user
       When I sign in with valid credentials
       Then I see a successful sign in message
+      And I should be on the task page
+      And I should see "Basic app | Tasks" in the selector "h1" 
+
+    Scenario: User return to the site
+      Given I exist as a user
+      When I sign in with valid credentials
+      Then I see a successful sign in message
       When I return to the site
-#      Then show me the page
       Then I should be signed in
  
     Scenario: User enters wrong email
