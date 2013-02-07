@@ -3,8 +3,12 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
 #    @tasks = Task.all
-    @tasks = Task.paginate(page: params[:page], per_page: 3)
-
+    if current_user.username == "administrator"
+      @tasks = Task.paginate(page: params[:page], per_page: 10, order: 'sequence DESC')
+    else
+      @tasks = Task.paginate(page: params[:page], per_page: 10, order: 'sequence DESC', conditions: {:general => true})
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tasks }
