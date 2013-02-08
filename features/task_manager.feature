@@ -31,7 +31,7 @@ Feature: Task manager
       When I fill in "Code" with "C003"
       And I fill in "Title" with "Task 003"
       And I fill in "Sequence" with "300"
-      And I press "Create Task"
+      And I press "Update"
 #      Then show me the page
       Then I should be on the show page for task "Task 003"
       And I should see "Task 003"
@@ -42,7 +42,7 @@ Feature: Task manager
       When I fill in "Code" with "C003"
       And I fill in "Title" with ""
       And I fill in "Sequence" with "300"
-      And I press "Create Task"
+      And I press "Update"
       And I am on the new task page
 
 

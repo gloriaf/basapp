@@ -1,0 +1,15 @@
+es:
+  static_pages:
+    home:
+      welcome: 'Bienvenido'
+      h2: 'Esta es una app basica hecha en Ruby on Rails, puede ser usada como punto de partida para construir aplicaciones Web mas complejas.'
+      h3_6: 'Sus caracteristicas principales son:'
+      h3_7: '- Managing static pages:'
+      li_8: 'Inicio'
+      li_9: 'Ayuda'
+      li_10: 'Contacto'
+      li_11: 'Sobre nosotros'
+      h3_12: '- Registro de usuarios (Devise)'
+      h3_13: '- Registro de usuarios usando servicios de terceros: Twitter, Facebook y Github'
+      h3_14: '- Envio de emails (mail)'
+      h3_15: '- Multi-lenguajes'

@@ -2,24 +2,27 @@ require 'spec_helper'
 
 describe TasksController do
 
-  # This should return the minimal set of attributes required to create a valid
-  # Task. As you add validations to Task, be sure to
-  # update the return value of this method accordingly.
+  include Devise::TestHelpers
+
   def valid_attributes
-    { code: "001", title: "Task 001", sequence: 100, rroute: "/users/index" }
+    { code: "001", title: "Task 001", sequence: 100, rroute: "/users/index", general: true }
   end
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # TasksController. Be sure to keep this updated too.
   def valid_session
     {}
   end
 
   describe "GET index" do
+    before do
+       @user = FactoryGirl.create( :user )
+       @user.username = "administrator"
+       sign_in @user
+    end
+    
     it "assigns all tasks as @tasks" do
+      
       task = Task.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, {}
       assigns(:tasks).should eq([task])
     end
   end
