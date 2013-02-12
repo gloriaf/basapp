@@ -7,7 +7,7 @@ FactoryGirl.define do
 #  end
   factory :project do
     name "Project"
-    type "Project type"
+    project_type "Project type"
     description "project description"
   end
 end

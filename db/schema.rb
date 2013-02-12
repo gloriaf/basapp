@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(:version => 20130212154235) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "project_type"
     t.date     "start"
     t.date     "end"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "tasks", :force => true do |t|
