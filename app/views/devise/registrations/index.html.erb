@@ -1,0 +1,31 @@
+<% provide(:title, 'Users') %>
+<h1>Basic app | <%= yield(:title) %></h1>
+
+<table  class="pretty hero-unit">
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <% if user_signed_in? && current_user.username == "administrator"%>
+        <th>E</th>
+        <th>D</th>
+    <% end %>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.username %></td>
+    <td><%= user.email %></td>
+    <% if user_signed_in? && current_user.username == "administrator"%>
+      <td><%= link_to image_tag("edit.gif", alt: "edit"), edit_user_registration_path(user) %></td>
+      <td><%= link_to image_tag("delete.gif", alt: "delete"), destroy_user_session_path, method: :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+<br />
+<div class="row">
+  <p class="center">
+    <%= link_to 'Back', tasks_path %>
+  </p>
+</div>
+

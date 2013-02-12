@@ -6,6 +6,6 @@ Feature: Sign out
     Scenario: User signs out
       Given I am logged in
       When I "Logout"
-      Then I should see a signed out message
+#      Then I should see a signed out message
       When I return to the site
       Then I should be signed out

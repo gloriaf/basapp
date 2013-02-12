@@ -1,17 +1,28 @@
 Basapp::Application.routes.draw do
 
-  root to: 'static_pages#home'
-  match '/help',    to: 'static_pages#help'
-  match '/contact', to: 'static_pages#contact'
-  match '/aboutUs', to: 'static_pages#aboutUs'
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
 
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
-  get "users/index"
+    match '/help',    to: 'static_pages#help'
+    match '/contact', to: 'static_pages#contact'
+    match '/aboutUs', to: 'static_pages#aboutUs'
 
-  match '/users/auth/failure', to: 'omniauth_callbacks#failure'
+    devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  resources :tasks do
-    match "execute" => "tasks#execute"
+    match '/users/auth/failure', to: 'omniauth_callbacks#failure'
+
+    resources :tasks do
+      match "execute" => "tasks#execute"
+    end
+    resources :projects
+
+    root to: 'static_pages#home', as: "locale_root"
+    
+    match '*path', to: redirect { |params, request| "/#{params[:locale]}" }
+
   end
-
+  
+  root to: redirect("/#{I18n.default_locale}")
+  match '/*locale/*path', to: redirect("/#{I18n.default_locale}/%{path}")
+  match '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
+  
 end

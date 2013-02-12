@@ -17,7 +17,7 @@ def create_unconfirmed_user
   create_visitor
   delete_user
   sign_up
-  visit '/users/sign_out'
+  visit '/en/users/sign_out'
 end
 
 def create_user
@@ -45,7 +45,7 @@ end
 
 def sign_up
   delete_user
-  visit '/users/sign_up'
+  visit '/en/users/sign_up'
   fill_in "user_username", :with => @visitor[:name]
   fill_in "user_email", :with => @visitor[:email]
   fill_in "user_password", :with => @visitor[:password]
@@ -55,13 +55,13 @@ def sign_up
 end
 
 def sign_in
-  visit '/users/sign_in'
+  visit '/en/users/sign_in'
   fill_in "user_email", :with => @visitor[:email]
   fill_in "user_password", :with => @visitor[:password]
   click_button "Sign in"
 end
 def sign_in_admin
-  visit '/users/sign_in'
+  visit '/en/users/sign_in'
   fill_in "user_email", :with => @admin[:email]
   fill_in "user_password", :with => @admin[:password]
   click_button "Sign in"
@@ -161,7 +161,7 @@ When /^I edit my account details$/ do
 end
 
 When /^I look at the list of users$/ do
-  visit '/'
+  visit '/en/'
 end
 
 ### THEN ###
@@ -182,7 +182,7 @@ Then /^I see an unconfirmed account message$/ do
 end
 
 Then /^I see a successful sign in message$/ do
-  page.should have_content "Signed in successfully."
+  page.should have_content "Logged in as"
 end
 
 Then /^I should see a successful sign up message$/ do

@@ -18,22 +18,25 @@ module NavigationHelpers
     when /the home page/
       root_path
     when /the aboutUs page/
-      aboutUs_path
+      aboutUs_path(locale: 'en')
     when /the contact page/
-      contact_path
+      contact_path(locale: 'en')
     when /the help page/
-      help_path
+      help_path(locale: 'en')
     when /the sign up page/
-      '/users/sign_up'
+      '/en/users/sign_up'
     when /the sign in page/
-      '/users/sign_in'
+      '/en/users/sign_in'
     when /Logout/
-      '/users/sign_out'
+      '/en/users/sign_out'
     when /the task page/
-      tasks_path
+      tasks_path(locale: 'en')
+    when /the new task page/
+      new_task_path(locale: 'en')
     when /^the show page for task "([^"]*)"$/
-      task_path(Task.find_by_title($1).id)
+      task_path(Task.find_by_title($1).id, locale: 'en')
 
+  
     else
       begin
         page_name =~ /^the (.*) page$/

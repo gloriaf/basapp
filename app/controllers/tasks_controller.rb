@@ -87,8 +87,9 @@ class TasksController < ApplicationController
   end
   
   def execute
-    @task = Task.find(params[:task_id])
 # @task.rroute debe ser del tipo "/users/index" por ejemplo
-    redirect_to @task.rroute
+    @task = Task.find(params[:task_id])
+    r="/#{params[:locale]}"+@task.rroute
+    redirect_to r
   end
 end
