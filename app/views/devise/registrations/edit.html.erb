@@ -1,8 +1,10 @@
 <% provide(:title, 'Edit User') %>
-<h1>Basic app | <%= yield(:title) %></h1>
+<header id="encabezado">
+  <h1>Basic app | <%= yield(:title) %></h1>
+</header>
 
-<div class="row hero-unit">
-  <div class="span6 offset3">
+<div class="normal">
+  <div class="formulario">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= devise_error_messages! %>
 
@@ -28,8 +30,8 @@
   </div>
 </div>
 
-<div class="row">
-  <p class="center">
+<div class="normal">
+  <p>
     <%= link_to "Back", :back %>
   </p>
 </div>

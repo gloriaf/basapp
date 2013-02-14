@@ -1,3 +1,8 @@
 <% provide(:title, 'Help') %>
-<h1>Basic app | Help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<header id="encabezado">
+  <h1>Basic app | <%= yield(:title) %></h1>
+</header>
+<div>
+  <p class="normal">Here you will find helpful information and documentation on the functionality of the application and how to use it.</br>
+  Additionally you can find answers to frequently asked questions (FAQ) and legal terms of use and service.</p>
+</div>

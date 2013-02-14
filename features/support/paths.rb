@@ -35,7 +35,6 @@ module NavigationHelpers
       new_task_path(locale: 'en')
     when /^the show page for task "([^"]*)"$/
       task_path(Task.find_by_title($1).id, locale: 'en')
-
   
     else
       begin

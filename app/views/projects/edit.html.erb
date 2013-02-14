@@ -1,6 +1,14 @@
-<h1>Editing project</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<% provide(:title, 'Edit project') %>
+  <header id="encabezado">
+    <h1>Basic app | <%= yield(:title) %></h1>
+  </header>
+   
+  <div class="normal">
+    <div class="formulario">
+      <%= render 'form' %>
+    </div><br /><br />
+  </div>
+  <div class="normal">
+    <%= link_to 'Show', @project %> |
+    <%= link_to 'Back', projects_path %>
+  </div>

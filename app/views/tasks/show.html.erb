@@ -1,21 +1,31 @@
 <% provide(:title, 'Tasks details') %>
-<h1>Basic app | <%= yield(:title) %></h1>
+  <header id="encabezado">
+    <h1>Basic app | <%= yield(:title) %></h1>
+  </header>
 
-<div class="row  hero-unit">
-  <div class="span6 offset3">
-   <p><b>Code:        </b><%= @task.code %></p>
-   <p><b>Title:       </b><%= @task.title %></p>
-   <p><b>Sequence:    </b><%= @task.sequence %></p>
-   <p><b>Rroute:      </b><%= @task.rroute %></p>
-   <p><b>Description: </b><%= @task.description %></p>
-   <p><b>General:     </b><%= @task.general %></p>
-   <p><b>Active:      </b><%= @task.active %></p>
-  
+
+  <div class="normal">
+    <div>
+     <p class="show_label">Code:</p>
+     <p class="show_data"><%= @task.code %></p>
+     <p class="show_label"><b>Title:</b></p>
+     <p class="show_data"><%= @task.title %></p>
+     <p class="show_label">Sequence:</p>
+     <p class="show_data"><%= @task.sequence %></p>
+     <p class="show_label">Rroute:</p>
+     <p class="show_data"><%= @task.rroute %></p>
+     <p class="show_label">Description:</p>
+     <p class="show_data"><%= @task.description %></p>
+     <p class="show_label">General:</p>
+     <p class="show_data"><%= @task.general %></p>
+     <p class="show_label">Active:</p>
+     <p class="show_data"><%= @task.active %></p>
+    
+    </div>
   </div>
-</div>
-<div class="row">
-  <p class="center">
-    <%= link_to 'Edit', edit_task_path(@task) %> |
-    <%= link_to 'Back', tasks_path %>
-  </p>
-</div>
+  <div class="normal">
+    <p class="center">
+      <%= link_to 'Edit', edit_task_path(@task) %> |
+      <%= link_to 'Back', tasks_path %>
+    </p>
+  </div>

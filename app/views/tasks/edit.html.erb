@@ -1,16 +1,18 @@
 <% provide(:title, 'Task') %>
-<h1>Basic app | <%= yield(:title) %></h1>
+  <header id="encabezado">
+    <h1>Basic app | <%= yield(:title) %></h1>
+  </header>
 
-<div class="row hero-unit">
-  <div class="span6 offset3">
-    <%= render 'form' %>
+  <div class="normal">
+    <div class="formulario">
+      <%= render 'form' %>
+    </div></br></br>
   </div>
-</div>
-
-<div class="row">
-  <p class="center">
-    <%= link_to 'Show', @task %> |
-    <%= link_to 'Back', tasks_path %>
-  </p>
-</div>
+  
+  <div class="normal">
+    <p>
+      <%= link_to 'Show', @task %> |
+      <%= link_to 'Back', tasks_path %>
+    </p>
+  </div>
   

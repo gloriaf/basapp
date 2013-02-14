@@ -1,43 +1,85 @@
 <% provide(:title, 'Home') %>
 <div>
-  <h1>Basic app | <%= yield(:title) %></h1>
-  <h1><%= t '.l_4' %></h1>
-  <h2>
-    This is a basic Ruby on Rails app, that can be used as a basis for building Web applications.
-  </h2>
-  <h3>
-    Its main features are:
-  </h2>
-  <h3>
-    - Managing static pages:
-  </h3>
-  <li>Home</li>
-  <li>Help</li>
-  <li>Contact</li>
-  <li>About us</li>
-  <h3>
-    - User registration (Devise)
-  </h3>
-  <h3>
-    - User registration through third: Twitter and Facebook
-  </h3>
-  <h3>
-    - Sending email (mail)
-  </h3>
-  <h3>
-    - Multi-languages
-  </h3>
+  <header id="encabezado">
+    <h1>Basic app | <%= yield(:title) %></h1>
+    <h2><%= t '.l_4' %></h2>
+  </header>
+  
+  <div id="blocks">
+    <section id="specials" class="box">
+      <header><h1 class="script">Basic web application</h1></header>
+      <p class="price">This is a complete application that can be downloaded and customized according to customer needs.
+The app should satisfy customer needs in terms of functionality, usability and style.</p>
+      <p class="price">For the development of this application have been used technologies such as Agile, Test Driven Development (TDD), Ruby on Rails and HTML5-CSS3.</p>
+    </section>
+    
+    </section>
+    <section id="news" class="box">
+      <header><h1 class="script">Main features</h1></header>
+      <article class="news-item">
+	<header>
+          <h1><a href="#">Managing static pages</a></h1>
+	</header>	
+	<p>Home | Help | Contact | About us</p>
+      </article>
+      <article class="news-item">
+	<header>
+          <h1><a href="#">User registration (Devise)</a></h1>
+	</header>	
+	<p>Management of all operations relating to the registration of users: subscription, login, profile data, user deletion, etc.. </p>
+      </article>
+      <article class="news-item">
+	<header>
+          <h1><a href="#">User registration through third</a></h1>
+	</header>	
+	<p>Single Sign On: facilitate the registration and entry into the application using the services of renowned companies such as Twitter and Linkedin</p>
+      </article>
+      <article class="news-item">
+	<header>
+          <h1><a href="#">Sending email (mail)</a></h1>
+        </header>	
+	<p>Sending and receiving emails and newsletters</p>
+      </article>		
+      <article class="news-item">
+	<header>
+          <h1><a href="#">Multi-languages</a></h1>
+        </header>	
+	<p>App available in several languages</p>
+      </article>		
+    </section>
+    
+    <section id="newsletter" class="box box-right">
+      <header><h1 class="script">Email Newsletter</h1></header>
+      <form id="sign-up"> 
+	<fieldset>
+          <label for="news-name">Name</label>
+          <input type="text" id="news-name" placeholder="What Shall We Call You" required /> 
+	</fieldset>
+	<fieldset> 
+          <label for="news-email">Email</label> 
+          <input type="email" id="news-email" placeholder="e.g. beerme@aol.com" required />
+	</fieldset>
+	<fieldset> 
+          <input type="submit" value="Subscribe" />
+	</fieldset> 
+      </form>
+    </section>
+
+  </div>
+  
+  
+ 
   <% if !user_signed_in? %>
-    <p class= "center"><%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %></p>
-    <p class= "center">
-      <%= link_to "Login", new_user_session_path, class: "btn btn-large btn-primary" %> * 
-      <%= link_to "Login with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-large btn-primary"  %> *
-      <%= link_to "Login with LinkedIn", user_omniauth_authorize_path(:linkedin), class: "btn btn-large btn-primary"  %> *
-      <%= link_to "Login with GitHub", user_omniauth_authorize_path(:github), class: "btn btn-large btn-primary"  %>  
+    <div><p><%= link_to "Sign up now!", new_user_registration_path, class: "boton" %></p>
+    </br><p>
+      <%= link_to "Login", new_user_session_path, class: "boton" %>  
+      <%= link_to image_tag('twitter32.png') , user_omniauth_authorize_path(:twitter), class: "boton"  %> 
+      <%= link_to image_tag('linkedin32.png') , user_omniauth_authorize_path(:linkedin), class: "boton"  %> 
+      <%= link_to image_tag('github32.png') , user_omniauth_authorize_path(:github), class: "boton"  %>  
     </p>
   <% else %>
-    <p class= "center">
-      <%= link_to "Task List", tasks_path, class: "btn btn-large btn-primary" %>  
+    <p>
+      <%= link_to "Task List", tasks_path, class: "boton" %>
     </p>
   <% end %>
 

@@ -1,3 +1,7 @@
 <% provide(:title, 'AboutUs') %>
-<h1>Basic app | AboutUs</h1>
-<p>Find me in app/views/static_pages/aboutUs.html.erb</p>
+<header id="encabezado">
+  <h1>Basic app | <%= yield(:title) %></h1>
+</header>
+<div>
+  <p class="normal">Company information: history, team, organization, mission, values, goals, etc..</p>
+</div>

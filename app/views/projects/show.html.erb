@@ -1,30 +1,27 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'Show project') %>
+  <header id="encabezado">
+    <h1>Basic app | <%= yield(:title) %></h1>
+  </header>
+   
+  <div class="normal">
+    <p id="notice"><%= notice %></p>
+    <p class="show_label">Name:</p>
+    <p class="show_data"><%= @project.name %></p>
+    
+    <p class="show_label">Type:</p>
+    <p><%= @project.project_type %></p>
+    
+    <p> class="show_label"Start:</p>
+    <p class="show_data"><%= @project.start %></p>
+    
+    <p class="show_label">End:</p>
+    <p class="show_data"><%= @project.end %></p>
+    
+    <p class="show_label">Description:</p>
+    <p class="show_data"><%= @project.description %></p>
+  </div>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= @project.project_type %>
-</p>
-
-<p>
-  <b>Start:</b>
-  <%= @project.start %>
-</p>
-
-<p>
-  <b>End:</b>
-  <%= @project.end %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+  <div class="normal">
+    <%= link_to 'Edit', edit_project_path(@project) %> |
+    <%= link_to 'Back', projects_path %>
+  </div>

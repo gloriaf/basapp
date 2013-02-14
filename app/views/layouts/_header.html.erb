@@ -1,31 +1,31 @@
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <nav  class="blanco"> 
-            <%= link_to image_tag("logo.png", alt: "pabilos"), 'http://www.pabilos.com', id: "logo" %>
-            <% if user_signed_in? %>
-              Logged in as <strong><%= current_user.email %></strong>
-            <% end %>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    root_path %></li>
-              <li><%= link_to "Help",    help_path %></li>
-              <% if user_signed_in? %>
-                <li><%= link_to "Edit profile", edit_user_registration_path %> </li>
-                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
-              <% else %>
-                <li><%= link_to "Sign up", new_user_registration_path %> </li>
-              <% end %>
-            </ul>
-          </nav>
-        </div>
-        <div class="container">
-          <nav  class="blanco"> 
-            <ul class="nav pull-right" >
-              <li><%= link_to "English", locale: 'en' %> </li>
-              <li><%= link_to "Spanish", locale: 'es' %> </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-  
+<header id="main">
+  <h1>
+    <%= link_to image_tag("logo.png", alt: "pabilos"), 'http://www.pabilos.com', id: "logo" %>
+  </h1>
+  <p id="user_login">
+    <% if user_signed_in? %>
+      Logged in as:  <b><%= current_user.email %></b>
+    <% end %>
+  </p>
+  <div class="clear"></div>
+  <p id="languages">
+    Languages:
+    <a><%= link_to "English", locale: 'en' %> </a>
+    <a><%= link_to "Spanish", locale: 'es' %> </a>
+  </p>
+  <div class="clear"></div>
+</header>
+<nav id="primary"> 
+  <ul>
+    <li><%= link_to "Home",    root_path %></li>
+    <li><%= link_to "Help",    help_path %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "Edit profile", edit_user_registration_path %> </li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+      <li><%= link_to "Tasks", tasks_path %> </li>
+    <% else %>
+      <li><%= link_to "Sign up", new_user_registration_path %> </li>
+    <% end %>
+  </ul>
+</nav>
+ 

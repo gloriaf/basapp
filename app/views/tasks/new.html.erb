@@ -1,9 +1,14 @@
-<h1>New task</h1>
+<% provide(:title, 'New task') %>
+<header id="encabezado">
+  <h1>Basic app | <%= yield(:title) %></h1>
+</header>
 
-<div class="row hero-unit">
-  <div class="span6 offset3">
+<div class="normal">
+  <div class="formulario">
     <%= render 'form' %>
-  </div>
+  </div></br></br>
 </div>
 
-<%= link_to 'Back', tasks_path %>
+<div class="normal">
+  <%= link_to 'Back', tasks_path %>
+</div>

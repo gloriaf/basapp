@@ -1,7 +1,10 @@
 <% provide(:title, 'Sign up') %>
-<div>
+<header id="encabezado">
   <h1>Basic app | <%= yield(:title) %></h1>
+</header>
 
+<div class="normal">
+  <div class="formulario">
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
@@ -20,15 +23,19 @@
     <%= f.text_field :username %></div>
 
     <div>
-      <%= f.submit "Sign up", class: "btn btn-large btn-primary" %><br />
-      or
+      <%= f.submit "Sign up" %>
     </div>
-      <%- if devise_mapping.omniauthable? %>
-        <%- resource_class.omniauth_providers.each do |provider| %>
-            <%= link_to "Sign up with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn btn-large btn-primary"  %>  
-        <% end -%>
-      <% end -%>
-    <% end %>
-
+  <% end %>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="normal">
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to "Sign up with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "boton"  %>  
+    <% end -%>
+  <% end -%>
+  
+  <div class="clear"></div></br></br>
   <%= render "devise/shared/links" %>
 </div>
