@@ -345,6 +345,13 @@
         null,
         null
       ],
+      "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/controllers/users_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/marygloriafernandezfernandez/Personal/pabilos/basapp/app/mailers/emailer.rb": [
         1,
         1,
@@ -374,6 +381,6 @@
         null
       ]
     },
-    "timestamp": 1360845231
+    "timestamp": 1360942698
   }
 }
