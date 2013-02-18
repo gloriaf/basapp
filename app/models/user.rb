@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.username = auth.info.nickname
       user.email = auth.info.email
+      user.password = auth.password
     end
   end
   

@@ -21,7 +21,7 @@ Devise.setup do |config|
 
   config.reconfirmable = true
 
-  config.password_length = 8..128
+  config.password_length = 3..128
 
   config.reset_password_within = 6.hours
 

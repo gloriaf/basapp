@@ -1,4 +1,5 @@
+# encoding: UTF-8
+
 es:
-  static_pages:
-    home:
-      l_4: 'Bienvenido'
+  hello: "Hola mundo"
+

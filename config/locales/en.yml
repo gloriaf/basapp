@@ -2,6 +2,4 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  static_pages:
-    home:
-      l_4: "Welcome"
+  home: "hello world"
