@@ -21,6 +21,7 @@ Basapp::Application.routes.draw do
 
   end
   
+  match '', to: redirect("/#{I18n.default_locale}")
   match '/*locale/*path', to: redirect("/#{I18n.default_locale}/%{path}")
   match '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
   
