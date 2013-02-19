@@ -15,13 +15,12 @@ Basapp::Application.routes.draw do
     end
     resources :projects
 
-    root to: 'static_pages#home', as: "locale_root"
+    root to: 'static_pages#home'
     
     match '*path', to: redirect { |params, request| "/#{params[:locale]}" }
 
   end
   
-  root to: redirect("/#{I18n.default_locale}")
   match '/*locale/*path', to: redirect("/#{I18n.default_locale}/%{path}")
   match '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
   

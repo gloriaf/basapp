@@ -1,11 +1,8 @@
 <% provide(:title, 'Confirmation') %>
 <div>
-  <header id="encabezado">
-    <h1>Basic app | <%= yield(:title) %></h1>
-  </header>
 
   <div class="normal">
-    <h2>Resend confirmation instructions</h2>
+    <h2><%= t('.resend') %></h2>
   
     <div class="formulario">
       <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
@@ -14,7 +11,7 @@
         <div><%= f.label :email %><br />
         <%= f.email_field :email, :autofocus => true %></div>
     
-        <div><%= f.submit "Resend confirmation instructions" %></div>
+        <div><%= f.submit t('.resend') %></div>
       <% end %>
     </div>
   </div>

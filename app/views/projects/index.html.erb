@@ -1,16 +1,13 @@
 <% provide(:title, 'Projects') %>
-  <header id="encabezado">
-    <h1>Basic app | <%= yield(:title) %></h1>
-  </header>
 
   <div class="normal">
     <table class="tabla">
       <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Start</th>
-        <th>End</th>
-        <th>Description</th>
+        <th><%= t('.name')%></th>
+        <th><%= t('.type')%></th>
+        <th><%= t('.start')%></th>
+        <th><%= t('.end')%></th>
+        <th><%= t('.description')%></th>
         <th></th>
         <th></th>
         <th></th>
@@ -23,9 +20,9 @@
         <td><%= project.start %></td>
         <td><%= project.end %></td>
         <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('projects.show'), project %></td>
+        <td><%= link_to t('projects.edit'), edit_project_path(project) %></td>
+        <td><%= link_to t('projects.delete'), project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     </table>
@@ -33,5 +30,5 @@
   </div>
   
   <div class="normal">
-    <%= link_to 'New Project', new_project_path %>
+    <%= link_to t('.new_project'), new_project_path %>
   </div>

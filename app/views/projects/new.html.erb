@@ -1,5 +1,11 @@
-<h1>New project</h1>
+<% provide(:title, 'New project') %>
 
-<%= render 'form' %>
+<div class="normal">
+  <div class="formulario">
+    <%= render 'form' %>
+  </div></br></br>
+</div>
 
-<%= link_to 'Back', projects_path %>
+<div class="normal">
+  <%= link_to t('projects.back'), projects_path %>
+</div>

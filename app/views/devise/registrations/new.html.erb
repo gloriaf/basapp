@@ -1,7 +1,4 @@
 <% provide(:title, 'Sign up') %>
-<header id="encabezado">
-  <h1>Basic app | <%= yield(:title) %></h1>
-</header>
 
 <div class="normal">
   <div class="formulario">
@@ -23,7 +20,7 @@
     <%= f.text_field :username %></div>
 
     <div>
-      <%= f.submit "Sign up" %>
+      <%= f.submit t('signup') %>
     </div>
   <% end %>
   </div>
@@ -32,7 +29,7 @@
 <div class="normal">
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to "Sign up with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "boton"  %>  
+      <%= link_to "#{t('.signup_with')} #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "boton"  %>  
     <% end -%>
   <% end -%>
   

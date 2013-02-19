@@ -1,7 +1,4 @@
 <% provide(:title, 'Edit project') %>
-  <header id="encabezado">
-    <h1>Basic app | <%= yield(:title) %></h1>
-  </header>
    
   <div class="normal">
     <div class="formulario">
@@ -9,6 +6,6 @@
     </div><br /><br />
   </div>
   <div class="normal">
-    <%= link_to 'Show', @project %> |
-    <%= link_to 'Back', projects_path %>
+    <%= link_to t('projects.show'), @project %> |
+    <%= link_to t('projects.back'), projects_path %>
   </div>

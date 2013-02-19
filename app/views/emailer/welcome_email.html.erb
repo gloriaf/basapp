@@ -4,14 +4,10 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Welcome!</h1>
-    <h2>You have successfully signed up to basapp</h2>
-    <p>
-      Your username is: <%= @user.username %><br/>
-    </p>
-    <p>
-      Your email is: <%= @user.email %><br/>
-    </p>
-    <h2>Thanks for joining and have a great day!</h2>
+    <h1><%= t('.welcome')%></h1>
+    <h2><%= t('.signedup')%></h2>
+    <p><%= t('.username')%><%= @user.username %><br/></p>
+    <p><%= t('.email')%><%= @user.email %><br/></p>
+    <h2><%= t('.thanks')%></h2>
   </body>
 </html>

@@ -1,22 +1,22 @@
 <footer id="primary-foot">
   <section id="history">
-    <header><h1>Our History</h1></header>
-    <p>We develop applications for users. Our priority is deliver Software running, based on customer needs. The market, user requirements and technology change every day and we adapt to this by using the best available technologies and the latest software engineering methodologies.<br />
-    <a href="#">Read More</a></p>
+    <header><h1><%= t('footer_header') %></h1></header>
+    <p><%= t('footer_detail') %><br />
+    <a href="#"><%= t('read_more') %></a></p>
   </section>
 
   <section id="info">
     <nav id="footer-nav">
       <ul>
-        <li><%= link_to "About",   aboutUs_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-        <li><a href="http://www.pabilos.com/">News</a></li>
+        <li><%= link_to t('about'),   aboutUs_path %></li>
+        <li><%= link_to t('contact'), contact_path %></li>
+        <li><a href="http://www.pabilos.com/"><%= t('news') %></a></li>
       </ul>
     </nav>
   </section>
 
   <p class="copyright" id="info">
-    &copy; 2013 Ma. Gloria Fernandez</br>
+    &copy; 2013 pabilos</br>
     <a href="http://www.pabilos.com/">www.pabilos.com</a>
   </p>
 

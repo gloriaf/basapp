@@ -1,8 +1,5 @@
 <% provide(:title, 'Sign in') %>
 <div>
- <header id="encabezado">
-  <h1>Basic app | <%= yield(:title) %></h1>
-  </header>
 
   <div class="normal">
     <div class="formulario">
@@ -18,7 +15,7 @@
           <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
         <% end -%>
 
-        <div><%= f.submit "Sign in", class: "btn btn-large btn-primary"  %></div>
+        <div><%= f.submit t('.signin'), class: "btn btn-large btn-primary"  %></div>
       <% end %>
     </div>
     <div class="clear"></div>

@@ -1,66 +1,53 @@
 <% provide(:title, 'Home') %>
 <div>
-  <header id="encabezado">
-    <h1>Basic app | <%= yield(:title) %></h1>
-    <h2>Welcome</h2>
+  <header id="encabezado2">
+    <h1><%= t('.welcome') %></h1>
   </header>
   
   <div id="blocks">
     <section id="specials" class="box">
-      <header><h1 class="script">Basic web application</h1></header>
-      <p class="price">This is a complete application that can be downloaded and customized according to customer needs.
-The app should satisfy customer needs in terms of functionality, usability and style.</p>
-      <p class="price">For the development of this application have been used technologies such as Agile, Test Driven Development (TDD), Ruby on Rails and HTML5-CSS3.</p>
+      <header><h1 class="script"><%= t('.block1_header') %></h1></header>
+      <p class="scriptDet"><%= t('.block1_det1') %></p>
+      <p class="scriptDet"><%= t('.block1_det2') %></p>
     </section>
     
-    </section>
     <section id="news" class="box">
-      <header><h1 class="script">Main features</h1></header>
+      <header><h1 class="script"><%= t('.block2_header') %></h1></header>
       <article class="news-item">
-	<header>
-          <h1><a href="#">Managing static pages</a></h1>
-	</header>	
-	<p>Home | Help | Contact | About us</p>
+	<header><h1><a href="#"><%= t('.block2_det1_header') %></a></h1></header>	
+	<p><%= t('.block2_det1_det') %></p>
       </article>
       <article class="news-item">
-	<header>
-          <h1><a href="#">User registration (Devise)</a></h1>
-	</header>	
-	<p>Management of all operations relating to the registration of users: subscription, login, profile data, user deletion, etc.. </p>
+	<header><h1><a href="#"><%= t('.block2_det2_header') %></a></h1></header>	
+	<p><%= t('.block2_det2_det') %></p>
       </article>
       <article class="news-item">
-	<header>
-          <h1><a href="#">User registration through third</a></h1>
-	</header>	
-	<p>Single Sign On: facilitate the registration and entry into the application using the services of renowned companies such as Twitter and Linkedin</p>
+	<header><h1><a href="#"><%= t('.block2_det3_header') %></a></h1></header>	
+	<p><%= t('.block2_det3_det') %></p>
       </article>
       <article class="news-item">
-	<header>
-          <h1><a href="#">Sending email (mail)</a></h1>
-        </header>	
-	<p>Sending and receiving emails and newsletters</p>
+	<header><h1><a href="#"><%= t('.block2_det4_header') %></a></h1></header>	
+	<p><%= t('.block2_det4_det') %></p>
       </article>		
       <article class="news-item">
-	<header>
-          <h1><a href="#">Multi-languages</a></h1>
-        </header>	
-	<p>App available in several languages</p>
+	<header><h1><a href="#"><%= t('.block2_det5_header') %></a></h1></header>	
+	<p><%= t('.block2_det5_det') %></p>
       </article>		
     </section>
     
     <section id="newsletter" class="box box-right">
-      <header><h1 class="script">Email Newsletter</h1></header>
+      <header><h1 class="script"><%= t('.block3_header') %></h1></header>
       <form id="sign-up"> 
 	<fieldset>
-          <label for="news-name">Name</label>
-          <input type="text" id="news-name" placeholder="What Shall We Call You" required /> 
+          <label for="news-name"><%= t('.block3_det1') %></label>
+          <input type="text" id="news-name" required placeholder=<%= t('.block3_det_ext') %>/> 
 	</fieldset>
 	<fieldset> 
-          <label for="news-email">Email</label> 
-          <input type="email" id="news-email" placeholder="e.g. beerme@aol.com" required />
+          <label for="news-email"><%= t('.block3_det2') %></label> 
+          <input type="email" id="news-email" required placeholder=<%= t('.block3_det_ext') %>/>
 	</fieldset>
 	<fieldset> 
-          <input type="submit" value="Subscribe" />
+          <input type="submit" value=<%= t('.block3_det3') %> />
 	</fieldset> 
       </form>
     </section>
@@ -70,16 +57,16 @@ The app should satisfy customer needs in terms of functionality, usability and s
   
  
   <% if !user_signed_in? %>
-    <div><p><%= link_to "Sign up now!", new_user_registration_path, class: "boton" %></p>
+    <div><p><%= link_to t('signup_now'), new_user_registration_path, class: "boton" %></p>
     </br><p>
-      <%= link_to "Login", new_user_session_path, class: "boton" %>  
+      <%= link_to t('login'), new_user_session_path, class: "boton" %>  
       <%= link_to image_tag('twitter32.png') , user_omniauth_authorize_path(:twitter), class: "boton"  %> 
       <%= link_to image_tag('linkedin32.png') , user_omniauth_authorize_path(:linkedin), class: "boton"  %> 
       <%= link_to image_tag('github32.png') , user_omniauth_authorize_path(:github), class: "boton"  %>  
     </p>
   <% else %>
     <p>
-      <%= link_to "Task List", tasks_path, class: "boton" %>
+      <%= link_to t('tasks'), tasks_path, class: "boton" %>
     </p>
   <% end %>
 

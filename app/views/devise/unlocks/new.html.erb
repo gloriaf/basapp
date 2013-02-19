@@ -1,7 +1,6 @@
 <% provide(:title, 'Unlock') %>
 <div>
-  <h1>Basic app | <%= yield(:title) %></h1>
-  <h2>Resend unlock instructions</h2>
+  <h2><%= t('.resend') %></h2>
 
   <%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
     <%= devise_error_messages! %>
@@ -9,7 +8,7 @@
     <div><%= f.label :email %><br />
     <%= f.email_field :email, :autofocus => true %></div>
 
-    <div><%= f.submit "Resend unlock instructions" %></div>
+    <div><%= f.submit t('.resend') %></div>
   <% end %>
 
   <%= render "devise/shared/links" %>

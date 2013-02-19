@@ -1,7 +1,4 @@
 <% provide(:title, 'Edit User') %>
-<header id="encabezado">
-  <h1>Basic app | <%= yield(:title) %></h1>
-</header>
 
 <div class="normal">
   <div class="formulario">
@@ -9,7 +6,7 @@
     <%= devise_error_messages! %>
 
     <div><%= f.label :email %><%= f.email_field :email, :autofocus => true %></div>
-    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <div><%= f.label :password %> <i><%= t('.leave')%></i><br />
     <%= f.password_field :password, :autocomplete => "off" %></div>
 
     <div><%= f.label :password_confirmation %><%= f.password_field :password_confirmation %></div>
@@ -17,22 +14,23 @@
     <div class="field"><%= f.label :username %><%= f.text_field :username %></div>
 
     <% if f.object.encrypted_password.present? %>
-      <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <div><%= f.label :current_password %> <i><%= t('.confirm') %></i><br />
       <%= f.password_field :current_password %></div>
     <% end %>
     
-    <div><%= f.submit "Update", class: "btn btn-large btn-primary"  %></div>
+    <div><%= f.submit t('.update'), class: "btn btn-large btn-primary"  %></div>
+    <div class="clear"></div>
     <% end %>
 
-    <h3>Cancel my account</h3>
-    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+    <h3><%= t('.cancel') %></h3>
+    <p><%= t('.unhappy') %> <%= link_to t('.cancel'), registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
 
   </div>
 </div>
 
 <div class="normal">
   <p>
-    <%= link_to "Back", :back %>
+    <%= link_to t('.back'), :back %>
   </p>
 </div>
 
