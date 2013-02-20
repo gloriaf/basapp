@@ -24,7 +24,7 @@ es:
   basapp: "App Básica"
   signup_now: "Regístrate ahora!"
   login: "Entrar"
-  tasks: "Tareas"
+  tasks_link: "Tareas"
   basic: "App básica | "
 
   static_pages:
@@ -114,8 +114,8 @@ es:
     message: " este proyecto no puede ser salvado:" 
     update: "Actualizar"
     back: "Atras"
-    show: "Ver"
-    edit: "Editar"
+    show_link: "Ver"
+    edit_link: "Editar"
     delete: "Eliminar"
     index:
       name: "Nombre"
@@ -130,6 +130,33 @@ es:
       start: "Comienzo:"
       end: "Fin:"
       description: "Descriptción:"
+  tasks:
+    update: "Actualizar"
+    back: "Atrás"
+    show_link: "Ver"
+    edit_link: "Editar"
+    delete: "Elimianr"
+    show:
+      code: "Código:"
+      title: "Título:"
+      sequence: "Secuencia:"
+      rroute: "Ruta:"
+      description: "Descripción:"
+      general: "General:"
+      active: "Activo:"
+    index:
+      code: "Código"
+      title: "Título"
+      sequence: "Secuencia"
+      rroute: "Rroute"
+      description: "Descripción"
+      general: "General"
+      active: "Activo"
+      go: "Ir"
+      s: "V"
+      e: "D"
+      d: "E"
+      new_task: "Nueva Tarea"
         
   date:
     abbr_day_names:
@@ -327,5 +354,33 @@ es:
     errors:
       <<: *errors
   activerecord:
-    errors:
-      <<: *errors
+    models:
+      project: Proyecto
+      task: Tarea
+      user: Usuario
+    successful:
+      messages:
+        created: "%{model} fue creado con exito."
+        updated: "%{model} fue creado con exito."
+    attributes:
+      project:
+        name: "Nombre"
+        description: "Descripción"
+        end: "Fin"
+        start: "Comienzo"
+        project_type: "Tipo de Proyecto"
+      task:
+        code: "Código"
+        title: "Título"
+        sequence: "Secuencia"
+        rroute: "Ruta"
+        description: "Descripción"
+        general: "General"
+        active: "Active"
+      user:
+        email: "Email"
+        password: "Clave"
+        password_confirmation: "Confirmación Clave"
+        remember_me: "Recordarme"
+        username: "Nombre usuario"
+        current_password: "Clave actual"

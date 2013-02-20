@@ -16,7 +16,7 @@ module NavigationHelpers
 #    when /^the home\s?page$/
 #      '/'
     when /the home page/
-      root_path
+      root_path(locale: 'en')
     when /the aboutUs page/
       aboutUs_path(locale: 'en')
     when /the contact page/
@@ -34,7 +34,7 @@ module NavigationHelpers
     when /the new task page/
       new_task_path(locale: 'en')
     when /^the show page for task "([^"]*)"$/
-      task_path(Task.find_by_title($1).id, locale: 'en')
+      task_path(Task.find_by_code($1).id, locale: 'en')
   
     else
       begin

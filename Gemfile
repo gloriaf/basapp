@@ -9,6 +9,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-linkedin'
 gem 'omniauth-github', "~> 1.0.3"
 gem 'will_paginate'
+gem 'globalize3'
 
 group :assets do
   gem 'sass-rails'

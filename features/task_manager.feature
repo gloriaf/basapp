@@ -32,9 +32,9 @@ Feature: Task manager
       And I fill in "Title" with "Task 003"
       And I fill in "Sequence" with "300"
       And I press "Update"
-#      Then show me the page
-      Then I should be on the show page for task "Task 003"
-      And I should see "Task 003"
+      Then show me the page
+      Then I should be on the show page for task "C003"
+      And I should see "C003"
 
     Scenario: Administrator User not add a new task
       Given I am logged in as an admin user

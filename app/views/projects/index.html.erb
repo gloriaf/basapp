@@ -20,8 +20,8 @@
         <td><%= project.start %></td>
         <td><%= project.end %></td>
         <td><%= project.description %></td>
-        <td><%= link_to t('projects.show'), project %></td>
-        <td><%= link_to t('projects.edit'), edit_project_path(project) %></td>
+        <td><%= link_to t('projects.show_link'), project %></td>
+        <td><%= link_to t('projects.edit_link'), edit_project_path(project) %></td>
         <td><%= link_to t('projects.delete'), project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

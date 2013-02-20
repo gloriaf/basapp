@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212154235) do
+ActiveRecord::Schema.define(:version => 20130220141839) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(:version => 20130212154235) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "task_translations", :force => true do |t|
+    t.integer  "task_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "task_translations", ["locale"], :name => "index_task_translations_on_locale"
+  add_index "task_translations", ["task_id"], :name => "index_task_translations_on_task_id"
 
   create_table "tasks", :force => true do |t|
     t.string   "code"
