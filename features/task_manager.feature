@@ -32,7 +32,11 @@ Feature: Task manager
       And I fill in "Title" with "Task 003"
       And I fill in "Sequence" with "300"
       And I press "Update"
+<<<<<<< HEAD
 #      Then show me the page
+=======
+      Then show me the page
+>>>>>>> ea99679ccc88ab4568de0fd90a8ca8df6feac87c
       Then I should be on the show page for task "C003"
       And I should see "C003"
 
