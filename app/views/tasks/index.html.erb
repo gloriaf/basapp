@@ -3,18 +3,18 @@
   <div class="normal">
     <table class="tabla">
       <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Go</th>
+        <th><%= t('.title')%></th>
+        <th><%= t('.description')%></th>
+        <th><%= t('.go')%></th>
         <% if user_signed_in? && current_user.username == "administrator"%>
-            <th>Code</th>
-            <th>Sequence</th>
-            <th>Rroute</th>
-            <th>General</th>
-            <th>Active</th>
-            <th>S</th>
-            <th>E</th>
-            <th>D</th>
+            <th><%= t('.code')%></th>
+            <th><%= t('.sequence')%></th>
+            <th><%= t('.rroute')%></th>
+            <th><%= t('.general')%></th>
+            <th><%= t('.active')%></th>
+            <th><%= t('.s')%></th>
+            <th><%= t('.e')%></th>
+            <th><%= t('.d')%></th>
         <% end %>
       </tr>
     
@@ -41,7 +41,7 @@
 
   <div class="normal">
     <% if user_signed_in? && current_user.username == "administrator"%>
-      <%= link_to 'New Task', new_task_path %>
+      <%= link_to t('.new_task'), new_task_path %>
     <% end %>
     </br>
   </div>

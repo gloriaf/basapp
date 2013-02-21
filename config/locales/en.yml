@@ -25,7 +25,7 @@ en:
   basapp: "Basic app"
   signup_now: "Sign up now!"
   login: "Login"
-  tasks: "Tasks"
+  tasks_link: "Tasks"
   basic: "Basic app | "
    
   static_pages:
@@ -131,6 +131,33 @@ en:
       start: "Start:"
       end: "End:"
       description: "Description:"
+  tasks:
+    update: "Update"
+    back: "Back"
+    show_link: "Show"
+    edit_link: "Edit"
+    delete: "Delete"
+    show:
+      code: "Code:"
+      title: "Title:"
+      sequence: "Sequence:"
+      rroute: "Rroute:"
+      description: "Description:"
+      general: "General:"
+      active: "Active:"
+    index:
+      code: "Code"
+      title: "Title"
+      sequence: "Sequence"
+      rroute: "Rroute"
+      description: "Description"
+      general: "General"
+      active: "Active"
+      go: "Go"
+      s: "S"
+      e: "E"
+      d: "D"
+      new_task: "New Task"
     
   date:
     abbr_day_names:
@@ -334,5 +361,33 @@ en:
     errors:
       <<: *errors
   activerecord:
-    errors:
-      <<: *errors
+    models:
+      project: Project
+      task: Task
+      user: User
+    successful:
+      messages:
+        created: "%{model} fue creado con exito."
+        updated: "%{model} fue creado con exito."
+    attributes:
+      project:
+        name: "Name"
+        description: "Description"
+        end: "End"
+        start: "Start"
+        project_type: "Project Type"
+      task:
+        code: "Code"
+        title: "Title"
+        sequence: "Sequence"
+        rroute: "Rroute"
+        description: "Description"
+        general: "General"
+        active: "Activ"
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        remember_me: "Remenber me"
+        username: "User Name"
+        current_password: "Current Password"

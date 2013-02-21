@@ -2,26 +2,26 @@
 
   <div class="normal">
     <div>
-     <p class="show_label">Code:</p>
+     <p class="show_label"><%= t('.code')%></p>
      <p class="show_data"><%= @task.code %></p>
-     <p class="show_label"><b>Title:</b></p>
+     <p class="show_label"><b><%= t('.title')%></b></p>
      <p class="show_data"><%= @task.title %></p>
-     <p class="show_label">Sequence:</p>
+     <p class="show_label"><%= t('.sequence')%></p>
      <p class="show_data"><%= @task.sequence %></p>
-     <p class="show_label">Rroute:</p>
+     <p class="show_label"><%= t('.rroute')%></p>
      <p class="show_data"><%= @task.rroute %></p>
-     <p class="show_label">Description:</p>
+     <p class="show_label"><%= t('.description')%></p>
      <p class="show_data"><%= @task.description %></p>
-     <p class="show_label">General:</p>
+     <p class="show_label"><%= t('.general')%></p>
      <p class="show_data"><%= @task.general %></p>
-     <p class="show_label">Active:</p>
+     <p class="show_label"><%= t('.active')%></p>
      <p class="show_data"><%= @task.active %></p>
     
     </div>
   </div>
   <div class="normal">
     <p class="center">
-      <%= link_to 'Edit', edit_task_path(@task) %> |
-      <%= link_to 'Back', tasks_path %>
+      <%= link_to t('tasks.edit_link'), edit_task_path(@task) %> |
+      <%= link_to t('tasks.back'), tasks_path %>
     </p>
   </div>
